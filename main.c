@@ -61,6 +61,18 @@ int main() {
     }
   }  
   printTabuleiro(tabuleiro);
+  
+  resetTabuleiro(tabuleiro);
+  printf("CONE\n");
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      if (i + j == 9 && i >= 5 && i <= 8) tabuleiro[i][j] = 3;
+      if (i >= 5) tabuleiro[i][i] = 3;
+      
+    }
+  }
+  
+  printTabuleiro(tabuleiro);
 
   return 0;
 }
